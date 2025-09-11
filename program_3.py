@@ -5,7 +5,7 @@ numberofitems = int(input())
 
 currentitem = 1
 totalitemcost = 0
-
+TAX = 0.07
     
 while currentitem <= numberofitems:                                    #check to make sure we are still on an item number that we want. If we only have 6 items but we are on item 7, then we shouldnt ask for the price of item 7 and should instead continue on to print our total.
     print("How much does item number " + str(currentitem) +" cost?")    
@@ -13,5 +13,5 @@ while currentitem <= numberofitems:                                    #check to
     currentitem += 1                                                   #here we increase our item number by 1
 else:  
     print("Item subtotal: " + str(totalitemcost))                      #print out totals, doing the math within the print line to reduce the amount of variables we need.
-    print("Sales tax: " + str(totalitemcost * 0.07))
-    print("     Total: " + str(totalitemcost * 1.07))
+    print("Sales tax: " + str(totalitemcost * TAX))
+    print("     Total: " + str(totalitemcost * (TAX + 1)))
